@@ -10,7 +10,7 @@
     "electron:build": "vite build && electron-builder",
     "start": "cross-env BROWSER=none  vite",
     "build": "vite build",
-    "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development  electron .",
+    "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development  electron ."
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
