@@ -1,0 +1,53 @@
+{
+  "name": "TimePulse",
+  "version": "0.0.1",
+  "description": "半小时进行小结",
+  "main": "./electron/main.js",
+  "author": "luoxingxuan<2422440832@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "electron:server": "concurrently -k \"yarn start\" \"yarn electron .\" ",
+    "electron:build": "vite build && electron-builder",
+    "start": "cross-env BROWSER=none  vite",
+    "build": "vite build",
+    "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development  electron .",
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.0.1",
+    "wait-on": "^8.0.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.7.8",
+    "bootstrap": "^5.3.3",
+    "vue": "^3.5.13"
+  },
+  "build": {
+    "appId": "timepulse",
+    "extends": null,
+    "productName": "TimePulse",
+    "copyright": "Copyright © 2024 timepulse",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist_electron"
+    },
+    "files": [
+      "electron/**/*",
+      "dist/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
