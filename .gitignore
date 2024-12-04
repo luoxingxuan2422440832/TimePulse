@@ -27,7 +27,7 @@ target
 *.iml
 
 
-.dist
-.dist_electron
-.node_modules
+dist
+dist_electron
+node_modules
 package-lock.json
