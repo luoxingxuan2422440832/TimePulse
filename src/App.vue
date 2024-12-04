@@ -271,7 +271,6 @@ export default {
       } else {
         timeRecords.value.push(newRecord);
       }
-      timeRecords.value.push(newRecord);
 
       // 保存到本地存储
       localStorage.setItem('timeRecords', JSON.stringify(timeRecords.value));

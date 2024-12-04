@@ -41,13 +41,8 @@
       "dist/**/*"
     ],
     "win": {
-      "target": "nsis"
-    },
-    "mac": {
-      "target": "dmg"
-    },
-    "linux": {
-      "target": "AppImage"
+      "target": "nsis",
+      "icon": "electron/time.ico"
     }
   }
 }

@@ -30,9 +30,7 @@ function createWindow() {
 }
 let tray = null
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
+app.commandLine.appendSwitch('lang', 'zh-CN'); // 放在app ready前 app.on('ready', ...)
 app.whenReady().then(() => {
     createWindow()
     // create_tray()
